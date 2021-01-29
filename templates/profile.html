@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%block title %} Profile {%endblock title%}
+{%load static %}
+
+{%if messages %}
+{%for message in messages%}
+<p {% if message.tags %} class='alert alert-{{message.tags}} mb-5' {% endif%}> {{message}}</p>
+{%endfor%}
+{%endif%}
+
+{% block content%}
+
+<h3 class="text-white my-3">Welcome {{username}}</h3>
+<div class="card mb-3" max style="max-width: 650px;" style="background-color: rgb(83,81,81)">
+    <div class="row no-gutters">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{%static 'images/default.jpg'%}" height=207 alt="...">
+            </div>
+            <div class="col-md-8" style="background-color: rgb(83,81,81)">
+                <div class="card-body">
+                    <h5 class="card-title">Full Name: {{first_name}} {{last_name}}</h5>
+                    <p class="card-text">Email Address: {{email}}</p>
+                    <p class="card-text">Posts made: {{posts}}</p>
+                    <p class="card-text"><small class="text-muted">Date joined: {{date}}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

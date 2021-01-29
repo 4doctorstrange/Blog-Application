@@ -1,0 +1,50 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>{%block title %} {%endblock title%}</title>
+
+
+  <link href='{% static "blog/css/bootstrap.css" %}' rel="stylesheet">
+
+  <link href='{%static "blog/css/style1.css" %}' rel="stylesheet">
+  <style>
+    .link { color:antiquewhite; } /* CSS link color */
+  </style>
+
+</head>
+
+<body>
+  <div class="container-fluid bg-dark">
+    {% include 'navbar.html' %}
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        {%block msg %}
+        {% endblock msg%}
+      </div>
+    </div>
+    <div class="row">
+      {% block side %}
+      {% endblock side %}
+
+      {% block content%}
+      {% endblock content%}
+    </div>
+  </div>
+
+  <script src='{%static "blog/js/jquery.js" %}'></script>
+  <script src='{%static "blog/js/popper.js" %}'></script>
+  <script src='{%static "blog/js/bootstap.js" %}'></script>
+</body>
+
+</html>

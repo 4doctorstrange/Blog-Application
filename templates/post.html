@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block title %} Post {%endblock title%}
+
+{% block content%}
+
+    <div class="col-sm-10">
+        
+        <div class="jumbotron jumbotron-fluid jumbo-color mt-4">
+            <div class="container">
+                <h3 class="link"><small>{{post.title}}</small></h3>
+                <small class='link'>By: </small> <strong class="mb-0 link" > {{post.author}}</strong>
+
+                <p><small class="link">{{post.date}}</small></p>
+                
+                    
+
+                <p class='lead'>
+                    {{post.desc|linebreaks}}
+                </p>
+            </div>
+        </div>
+        <a href="/" class='btn btn-primary'>Return</a>
+    </div>
+
+
+    
+
+
+
+
+{% endblock content%}

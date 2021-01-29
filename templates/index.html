@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+{%block title %} Home {%endblock title%}
+
+{% block content%}
+
+<div class='row'>
+    <div class="col-sm-7">
+        <h3 class="text-white my-3"></h3>
+        {%for post in posts%}
+        <div class="jumbotron jumbotron-fluid jumbo-color">
+            <div class="container">
+                <h3 class="mb-0 link">{{post.title}}</h3>
+
+                <small class='link'>By: </small><strong class="mb-3 link">{{post.author}}</strong>
+
+                <p class='lead mt-2 '>
+                    {{post.desc|truncatechars:250|linebreaks}} <a href="/post/{{post.id}}" class="btn btn-primary btn-sm">Read
+                        more</a>
+                    </p>
+
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+
+    <div class="col-sm-4">
+        <div class="jumbotron jumbotron-fluid jumbo-color">
+
+            <div class="container">
+                <h3 class="mt-5 link">Hola Manipal!!</h3>
+                <p>We would love to have a post from you, you can share any experience, information or a memory here and
+                    help our community grow. To make a post here you can check out following steps.</p>
+                <ul>
+                    <li>Register yourself</li>
+                    <li>Login in Dashboard </li>
+                    <li>Make post under "Add Post" in the Dashboard</li>
+
+                </ul>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/harsh-rajput-56862a155/" class='link mb-2'><strong>Contact Developer</strong>
+                        </a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content%}
