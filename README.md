@@ -1,5 +1,5 @@
-<p><a href="https://blogapp2133.herokuapp.com/"><h3>Mujhub</h3></a><h4> is a basic blog application based of Python-Django framework deployed on heroku web-server</h4></p>
-<h5>About the APP</h5>
+<h3><a href="https://blogapp2133.herokuapp.com/">Mujhub</a></h3><h4> is a basic blog application based of Python-Django framework deployed on heroku web-server</h4>
+<h4>About the APP</h4>
 <p>1. It uses SQLite3 database for storing user and post information</p>
 <p>2. Any person visiting the app can view all the post written by our community members</p>
 <p>3. To make a post, user first have to register himself by providing basic details and setting account information</p>
